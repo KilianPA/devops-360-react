@@ -20,6 +20,8 @@ steps:
     settings:
       api_key: from_secret : api-github
       files: *
+    when:
+      event: toast
   - name: slack
     image: plugins/slack
     settings:
