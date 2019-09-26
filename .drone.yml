@@ -22,8 +22,7 @@ steps:
         from_secret: api_github
       files: /*
     when:
-      event:
-        - tag
+      event: tag
   - name: slack
     image: plugins/slack
     settings:
