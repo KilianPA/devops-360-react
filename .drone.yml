@@ -6,6 +6,7 @@ steps:
   - name: build
     image: node:alpine
     commands:
+      - npm install
       - npm run build
   - name: test
     image: node:alpine
