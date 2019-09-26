@@ -19,7 +19,7 @@ steps:
     image: plugins/github-release
     settings:
       api_key:
-        from_secret: github_token
+        from_secret: api_github
       files: /*
     when:
       event: [toast]
