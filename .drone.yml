@@ -20,7 +20,7 @@ steps:
     settings:
       webhook: https://hooks.slack.com/services/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
       channel: drone1
-  - name: release
+  - name: publish
     image: plugins/github-release
     settings:
       api_key:
