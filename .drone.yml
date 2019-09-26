@@ -11,6 +11,7 @@ steps:
     image: node:alpine
     commands:
       - npm run build
+      - tar -czvf build.tar.gz -C build .
   - name: test
     image: node:alpine
     commands:
@@ -20,7 +21,7 @@ steps:
     settings:
       api_key:
         from_secret: api_github
-      files: build.tar.gz
+      files: ./build.tar.gz
     when:
       event: tag
   - name: slack
