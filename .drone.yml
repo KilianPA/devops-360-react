@@ -18,10 +18,11 @@ steps:
   - name: release
     image: plugins/github-release
     settings:
-      api_key: from_secret : api-github
+      api_key:
+        from_secret : api-github
       files: *
     when:
-      event: ['toast']
+      event: [toast]
   - name: slack
     image: plugins/slack
     settings:
