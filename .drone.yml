@@ -15,6 +15,11 @@ steps:
     image: node:alpine
     commands:
       - npm run test
+  - name: slack
+    image: plugins/slack
+    settings:
+      webhook: https://hooks.slack.com/services/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
+      channel: drone1
   - name: release
     image: plugins/github-release
     settings:
@@ -23,9 +28,4 @@ steps:
       files: /*
     when:
       event: [toast]
-  - name: slack
-    image: plugins/slack
-    settings:
-      webhook: https://hooks.slack.com/services/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
-      channel: drone1
 
