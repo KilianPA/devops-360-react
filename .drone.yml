@@ -27,5 +27,6 @@ steps:
         from_secret: api_github
       files: /*
     when:
-      event: [toast]
+      event:
+        - push
 
